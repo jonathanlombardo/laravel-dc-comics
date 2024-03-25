@@ -11,34 +11,38 @@
 
   <div class="container">
     <p class="mt-5"><i>All fields signed by * are mandatory</i></p>    
-    <form class="row py-5 g-3">
+    <form action="{{route('comics.store')}}" method="POST" class="row py-5 g-3">
+      @csrf
       <div class="col-4">
         <label for="title" class="form-label">Title*</label>
-        <input type="text" class="form-control rounded-0" id="title" name="title" placeholder="Comic name: #999" requiered>
+        <input type="text" class="form-control rounded-0" id="title" name="title" placeholder="Comic name: #999" required>
       </div>
       <div class="col-4">
         <label for="thumb" class="form-label">Image URL*</label>
-        <input type="url" class="form-control rounded-0" id="thumb" name="thumb" placeholder="https://www.cover.com/image/comics.jpg" requiered>
+        <input type="url" class="form-control rounded-0" id="thumb" name="thumb" placeholder="https://www.cover.com/image/comics.jpg" required>
       </div>
       <div class="col-4">
         <label for="price" class="form-label">Price ($)*</label>
-        <input type="number" class="form-control rounded-0" id="price" name="price" placeholder="19,99" max="999999.99" step="0.01" requiered>
+        <input type="number" class="form-control rounded-0" id="price" name="price" placeholder="19,99" max="999999.99" step="0.01" required>
       </div>
       <div class="col-4">
         <label for="series" class="form-label">Series*</label>
-        <input type="text" class="form-control rounded-0" id="series" name="series" placeholder="Action Comics" requiered>
+        <input type="text" class="form-control rounded-0" id="series" name="series" placeholder="Action Comics" required>
       </div>
       <div class="col-4">
         <label for="sale_date" class="form-label">Sale Date*</label>
-        <input type="date" class="form-control rounded-0" id="sale_date" name="sale_date" requiered>
+        <input type="date" class="form-control rounded-0" id="sale_date" name="sale_date" required>
       </div>
       <div class="col-4">
         <label for="type" class="form-label">Type*</label>
-        <input type="text" class="form-control rounded-0" id="type" name="type" placeholder="comic book" requiered>
+        <input type="text" class="form-control rounded-0" id="type" name="type" placeholder="comic book" required>
       </div>
       <div class="col-12">
         <label for="description" class="form-label">Description</label>
-        <textarea class="form-control" placeholder="Description of comic" id="description" rows="3"></textarea>
+        <textarea class="form-control" placeholder="Description of comic" id="description" name="description" rows="3"></textarea>
+      </div>
+      <div class="col">
+        <button class="btn btn-success">Save</button>
       </div>
 
     </form>
