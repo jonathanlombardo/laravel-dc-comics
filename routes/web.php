@@ -16,9 +16,8 @@ use App\Http\Controllers\PageController;
 */
 
 Route::redirect('/', '/home');
-Route::get('/comics', [ComicController::class, 'index'])->name('comics.index');
-Route::get('/comics/{comic}', [ComicController::class, 'show'])->name('comics.show');
 
+Route::resource('comics', ComicController::class);
 
 Route::get('/home', [PageController::class, 'home'])->name('home');
 Route::get('/characters', [PageController::class, 'characters'])->name('characters');
