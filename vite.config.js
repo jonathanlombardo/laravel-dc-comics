@@ -9,6 +9,7 @@ export default defineConfig({
                 "resources/scss/app.scss",
                 "resources/scss/comics.scss",
                 "resources/scss/comic-details.scss",
+                "resources/scss/comic-create-form.scss",
                 "resources/scss/main.scss",
                 "resources/js/app.js",
             ],
