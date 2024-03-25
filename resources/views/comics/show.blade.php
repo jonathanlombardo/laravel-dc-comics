@@ -22,7 +22,7 @@
       <h2>{{ $comic->title}}</h2>
       <div class="info-wrapper">
         <div class="price-wrapper">
-          <div class="price">U.S. Price: <span class="value">{{$comic->price}}</span></div>
+          <div class="price">U.S. Price: <span class="value">{{$comic->getPrice()}}</span></div>
           <div class="available">AVAILABLE</div>
         </div>
         <div class="check-available">Check Availability</div>
@@ -84,11 +84,11 @@
         </li>
         <li>
           <span>US Price</span>
-          <p>{{$comic->price}}</p>
+          <p>{{$comic->getPrice()}}</p>
         </li>
         <li>
           <span>On Sale Date</span>
-          <p>{{$comic->sale_date}}</p>
+          <p>{{$comic->getDate()}}</p>
         </li>
       </ul>
     </div>
