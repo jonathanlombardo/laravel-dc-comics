@@ -1,0 +1,184 @@
+@use "./partials/variables" as *;
+
+header {
+    .aside-wrapper {
+        background-color: $primary-col;
+        font-size: 0.8rem;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        color: white;
+
+        .aside {
+            text-align: end;
+
+            * {
+                margin-left: 45px;
+            }
+
+            select {
+                background-color: transparent;
+                color: inherit;
+                border: none;
+
+                &:focus-visible {
+                    outline: none;
+                }
+            }
+        }
+    }
+
+    .content-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 115px;
+
+        figure {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            align-items: center;
+
+            img {
+                height: 80px;
+            }
+        }
+
+        nav {
+            height: 100%;
+
+            ul {
+                height: 100%;
+                display: flex;
+                align-items: center;
+
+                li {
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+
+                    &.active {
+                        box-shadow: inset 0px -6px 0 blue;
+                    }
+
+                    .link {
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+
+        .input-group.header-search {
+            width: 13%;
+
+            &:focus,
+            &:focus-visible,
+            input:focus,
+            input:focus-visible {
+                outline: none;
+                box-shadow: none;
+            }
+
+            input,
+            span {
+                border: none;
+                border-bottom: 1px solid $primary-col;
+                border-radius: 0;
+                background-color: transparent;
+                padding-left: 0;
+
+                img {
+                    width: 1rem;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.hero {
+    height: 400px;
+    img {
+        object-fit: cover;
+        object-position: top;
+        width: 100%;
+    }
+}
+
+footer {
+    .footer-main {
+        background-image: url("../img/footer-bg.jpg");
+        background-size: cover;
+
+        color: #b4b4b4;
+        overflow: hidden;
+        padding-top: 40px;
+        padding-bottom: 40px;
+
+        .link-wrapper {
+            position: relative;
+            .nav-wrapper {
+                display: flex;
+                gap: 20px;
+
+                ul {
+                    margin-top: 5px;
+                    margin-bottom: 20px;
+
+                    li {
+                        font-size: 0.8em;
+                        a:hover {
+                            color: $primary-col;
+                        }
+                    }
+                }
+
+                .title {
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    color: white;
+                }
+            }
+
+            .copyright {
+                max-width: 50%;
+                font-size: 0.8em;
+                a {
+                    color: $primary-col;
+                }
+            }
+
+            img {
+                position: absolute;
+                right: 0;
+                bottom: 50%;
+                transform: translateY(50%);
+
+                max-width: 50%;
+                max-height: none;
+            }
+        }
+    }
+
+    .footer-aside {
+        background-color: #303030;
+        padding: 40px;
+
+        button {
+            font-size: 1.2em;
+            background-color: transparent;
+            border: 2px solid $primary-col;
+            color: white;
+
+            padding: 5px 15px;
+        }
+
+        ul {
+            font-size: 1.5em;
+            color: $primary-col;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+    }
+}

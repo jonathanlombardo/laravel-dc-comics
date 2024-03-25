@@ -1,0 +1,70 @@
+@use "./partials/variables" as *;
+
+main {
+    background-color: $secondary-col;
+    color: white;
+
+    .title-label {
+        $height: 60px;
+        $width: 260px;
+
+        height: $height;
+        width: $width;
+        line-height: $height;
+        text-align: center;
+        text-transform: uppercase;
+        transform: translateY(-50%);
+        margin-bottom: calc(-1 * $height / 2);
+
+        background-color: $primary-col;
+        color: white;
+        font-weight: bold;
+    }
+
+    .comic-card {
+        img {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            object-position: top;
+        }
+    }
+
+    .load-more {
+        display: block;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin: auto;
+        background-color: $primary-col;
+        color: white;
+        border-radius: 0;
+    }
+
+    section.buy-comics {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+        height: 155px;
+
+        text-transform: uppercase;
+
+        color: white;
+        background-color: $primary-col;
+
+        a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            height: 55px;
+            // width: 215px;
+
+            img {
+                display: inline-block;
+                width: 60px;
+                height: 60px;
+                object-fit: contain;
+            }
+        }
+    }
+}

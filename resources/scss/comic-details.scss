@@ -1,0 +1,109 @@
+@use "./partials/variables" as *;
+
+.container.small {
+    max-width: 1140px;
+}
+
+.topbar {
+    $height: 80px;
+
+    background-color: $primary-col;
+    height: $height;
+
+    img {
+        width: 195px;
+        height: 295px;
+        object-fit: cover;
+
+        transform: translateY(calc(-100% + ($height / 100 * 60)));
+    }
+}
+
+.col-content {
+    h2 {
+        color: $primary-text;
+    }
+    .info-wrapper {
+        display: flex;
+        background-color: #55ba59;
+        color: #bafd9c;
+
+        .price-wrapper {
+            flex-grow: 1;
+            display: flex;
+            justify-content: space-between;
+            border-right: 1px solid black;
+        }
+
+        .check-available,
+        .price-wrapper {
+            padding: 10px 20px;
+            font-weight: bold;
+            border-bottom: 1px solid black;
+        }
+
+        .check-available,
+        .price .value {
+            color: white;
+        }
+    }
+
+    p.desc {
+        font-weight: bold;
+        color: #555555;
+        margin-top: 15px;
+    }
+}
+
+.col-adv {
+    color: #555555;
+    font-weight: bold;
+
+    a {
+        position: relative;
+        .adv-label {
+            position: absolute;
+            bottom: 100%;
+            right: 0;
+            padding-bottom: 2px;
+        }
+        img {
+            margin-left: auto;
+        }
+    }
+}
+
+section.details {
+    background-color: #f6f6f6;
+    color: $primary-text;
+
+    a {
+        color: $primary-col;
+
+        &:hover {
+            filter: brightness(0.5);
+        }
+    }
+
+    .detail-title {
+        border-bottom: 1px solid rgb(204, 204, 204);
+        padding-bottom: 20px;
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+
+    .detail-list > li {
+        border-bottom: 1px solid rgb(204, 204, 204);
+        display: flex;
+        padding: 10px 0;
+        font-size: 0.8rem;
+
+        > *:first-child {
+            width: 30%;
+        }
+
+        > *:last-child {
+            width: 70%;
+        }
+    }
+}
