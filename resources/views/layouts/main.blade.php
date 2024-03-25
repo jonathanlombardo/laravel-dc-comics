@@ -18,9 +18,7 @@
 </head>
 <body>
   @include('layouts.partials.header')
-  <div class="hero">
-    <img src="{{ Vite::asset('resources/img/jumbotron.jpg') }}" alt="">
-  </div>
+  @yield('hero')
   @yield('maincontent')
   @include('layouts.partials.footer')
 

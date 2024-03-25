@@ -4,6 +4,10 @@
 @vite('resources/scss/comics.scss')
 @endsection
 
+@section("hero")
+@include('layouts.partials.hero')
+@endsection
+
 
 @section('maincontent')
 
@@ -12,6 +16,9 @@
   <div class="container">
     
     <div class="title-label fs-4">current series</div>
+    <div class="text-end">
+      <a href="#" class="btn btn-outline-primary my-3">add new comic</a>
+    </div>
 
     <div class="row row-cols-6 g-4 py-3">
       @forelse ($comics as $comic)

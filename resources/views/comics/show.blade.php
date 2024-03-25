@@ -4,6 +4,10 @@
 @vite('resources/scss/comic-details.scss')
 @endsection
 
+@section("hero")
+@include('layouts.partials.hero')
+@endsection
+
 @section('maincontent')
 
 <div class="topbar">
