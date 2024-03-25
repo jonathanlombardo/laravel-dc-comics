@@ -42,7 +42,8 @@
         <textarea class="form-control" placeholder="Description of comic" id="description" name="description" rows="3"></textarea>
       </div>
       <div class="col">
-        <button class="btn btn-success">Save</button>
+        <button class="rounded-0 btn btn-success">Save</button>
+        <a href="{{route("comics.index")}}" class="rounded-0 btn btn-outline-primary">Back to the list</a>
       </div>
 
     </form>

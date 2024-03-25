@@ -16,6 +16,10 @@
   </div>
 </div>
 
+<div class="container small">    
+<a href="{{route("comics.index")}}" class="rounded-0 btn btn-outline-primary mt-3">Back to the list</a>
+</div>
+
 <div class="container small py-5">
   <div class="row g-5">
     <div class="col-9 col-content">
