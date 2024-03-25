@@ -8,23 +8,23 @@
 
 <div class="topbar">
   <div class="container small">    
-    <img src="{{ $comic["thumb"] }}" alt="{{ $comic["type"] }} Image">
+    <img src="{{ $comic->thumb }}" alt="{{ $comic->type }} Image">
   </div>
 </div>
 
 <div class="container small py-5">
   <div class="row g-5">
     <div class="col-9 col-content">
-      <h2>{{ $comic["title"]}}</h2>
+      <h2>{{ $comic->title}}</h2>
       <div class="info-wrapper">
         <div class="price-wrapper">
-          <div class="price">U.S. Price: <span class="value">{{$comic["price"]}}</span></div>
+          <div class="price">U.S. Price: <span class="value">{{$comic->price}}</span></div>
           <div class="available">AVAILABLE</div>
         </div>
         <div class="check-available">Check Availability</div>
       </div>
       <p class="desc">
-        {{$comic["description"]}}
+        {{$comic->description}}
       </p>
     </div>
     <div class="col-3 col-adv">
@@ -76,15 +76,15 @@
       <ul class="detail-list">
         <li>
           <span>Series</span>
-          <p><a href="#">{{$comic["series"]}}</a></p>
+          <p><a href="#">{{$comic->series}}</a></p>
         </li>
         <li>
           <span>US Price</span>
-          <p>{{$comic["price"]}}</p>
+          <p>{{$comic->price}}</p>
         </li>
         <li>
           <span>On Sale Date</span>
-          <p>{{$comic["sale_date"]}}</p>
+          <p>{{$comic->sale_date}}</p>
         </li>
       </ul>
     </div>

@@ -18,8 +18,8 @@
 
       <a href="{{ route('comics.show', $comic)}}" class="col">
         <div class="comic-card">
-          <img src="{{ $comic["thumb"] }}" alt="">
-          <div class="serie">{{ $comic["series"] }}</div>
+          <img src="{{ $comic->thumb }}" alt="">
+          <div class="serie">{{ $comic->series }}</div>
         </div>
 
       </a>
