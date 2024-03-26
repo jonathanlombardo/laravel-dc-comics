@@ -19,11 +19,7 @@
 <div class="container small">    
 <a href="{{route("comics.index")}}" class="rounded-0 btn btn-outline-primary mt-3">Back to the list</a>
 <a href="{{route("comics.edit", $comic)}}" class="rounded-0 btn btn-outline-success mt-3">Edit comic</a>
-<form class="d-inline" action="{{route("comics.destroy", $comic)}}" method="POST">
-  @csrf
-  @method('DELETE')
-  <button class="rounded-0 btn btn-outline-danger mt-3">Delete comic</button>
-</form>
+<button data-modal-id="destroyer-modal-{{$comic->id}}" data-modal-type="destroyer" class="rounded-0 btn btn-outline-danger mt-3">Delete comic</button>
 </div>
 
 <div class="container small py-5">
@@ -106,4 +102,12 @@
   </div>
 </section>
 
+@endsection
+
+@section('modals')
+@include('layouts.partials.destroyerModal')
+@endsection
+
+@section('script')
+@include('layouts.partials.destroyerScript')
 @endsection
