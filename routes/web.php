@@ -19,13 +19,14 @@ Route::redirect('/', '/home');
 
 Route::resource('comics', ComicController::class);
 
-Route::get('/home', [PageController::class, 'home'])->name('home');
-Route::get('/characters', [PageController::class, 'characters'])->name('characters');
-Route::get('/movies', [PageController::class, 'movies'])->name('movies');
-Route::get('/games', [PageController::class, 'games'])->name('games');
-Route::get('/collectibles', [PageController::class, 'collectibles'])->name('collectibles');
-Route::get('/videos', [PageController::class, 'videos'])->name('videos');
-Route::get('/fans', [PageController::class, 'fans'])->name('fans');
-Route::get('/news', [PageController::class, 'news'])->name('news');
-Route::get('/shop', [PageController::class, 'shop'])->name('shop');
-
+Route::controller(PageController::class)->group(function () {
+  Route::get('/home', 'home')->name('home');
+  Route::get('/characters', 'characters')->name('characters');
+  Route::get('/movies', 'movies')->name('movies');
+  Route::get('/games', 'games')->name('games');
+  Route::get('/collectibles', 'collectibles')->name('collectibles');
+  Route::get('/videos', 'videos')->name('videos');
+  Route::get('/fans', 'fans')->name('fans');
+  Route::get('/news', 'news')->name('news');
+  Route::get('/shop', 'shop')->name('shop');
+});
