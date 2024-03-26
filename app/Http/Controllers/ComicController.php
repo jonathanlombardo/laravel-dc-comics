@@ -23,7 +23,7 @@ class ComicController extends Controller
    */
   public function create()
   {
-    return view('comics.create');
+    return view('comics.form');
   }
 
   /**
@@ -57,7 +57,7 @@ class ComicController extends Controller
    */
   public function edit(Comic $comic)
   {
-    //
+    return view('comics.form', compact('comic'));
   }
 
   /**
