@@ -22,5 +22,7 @@
   @yield('maincontent')
   @include('layouts.partials.footer')
 
+  @yield('modals')
+  @yield('script')
 </body>
 </html>
