@@ -16,6 +16,7 @@
   <div class="container">
     
     <div class="title-label fs-4">current series</div>
+    @include('layouts.partials.flashAlert')
     <div class="text-end">
       <a href="{{route("comics.create")}}" class="rounded-0 btn btn-outline-primary my-3">add new comic</a>
     </div>

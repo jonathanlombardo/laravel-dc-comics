@@ -16,6 +16,10 @@
   </div>
 </div>
 
+<div class="container small">
+  @include('layouts.partials.flashAlert')
+</div>
+
 <div class="container small">    
 <a href="{{route("comics.index")}}" class="rounded-0 btn btn-outline-primary mt-3">Back to the list</a>
 <a href="{{route("comics.edit", $comic)}}" class="rounded-0 btn btn-outline-success mt-3">Edit comic</a>
