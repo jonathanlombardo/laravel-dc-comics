@@ -49,7 +49,10 @@
 
     </div>
 
-    <button class="btn load-more mb-3">LOAD MORE</button>
+    <!-- <button class="btn load-more mb-3">LOAD MORE</button> -->
+    <div class="my-5 custom-paginator" data-bs-theme="dark">
+      {{$comics->links()}}
+    </div>
     
   </div>
 
