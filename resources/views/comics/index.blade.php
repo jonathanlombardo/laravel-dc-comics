@@ -23,13 +23,19 @@
     <div class="row row-cols-6 g-4 py-3">
       @forelse ($comics as $comic)
 
-      <a href="{{ route('comics.show', $comic)}}" class="col">
+      <div class="col">
         <div class="comic-card">
-          <img src="{{ $comic->thumb }}" alt="">
-          <div class="serie">{{ $comic->series }}</div>
+          <div class="figure w-100">
+            <img src="{{ $comic->thumb }}" alt="">
+            <div data-modal-id="destroyer-modal-{{$comic->id}}" data-modal-type="destroyer">Delete comic</div>
+          </div>
+          <div class="serie">
+            <a href="{{ route('comics.show', $comic)}}">
+              {{ $comic->series }}
+            </a>
+          </div>
         </div>
-
-      </a>
+      </div>
 
       @empty
 
@@ -72,4 +78,14 @@
 
 </main>
 
+@endsection
+
+@section('modals')
+  @foreach($comics as $comic)
+    @include('layouts.partials.destroyerModal')
+  @endforeach
+@endsection
+
+@section('script')
+  @include('layouts.partials.destroyerScript')
 @endsection

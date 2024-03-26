@@ -22,11 +22,36 @@ main {
     }
 
     .comic-card {
+        position: relative;
+        font-size: 1.2rem;
         img {
             width: 100%;
             aspect-ratio: 1;
             object-fit: cover;
             object-position: top;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            filter: brightness(50%);
+        }
+
+        .figure {
+            [data-modal-type="destroyer"] {
+                display: none;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                background-color: rgba(0, 0, 0, 0.611);
+                text-align: center;
+                cursor: pointer;
+            }
+
+            &:hover {
+                [data-modal-type="destroyer"] {
+                    display: block;
+                }
+            }
         }
     }
 
